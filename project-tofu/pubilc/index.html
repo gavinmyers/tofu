@@ -1,0 +1,98 @@
+<html>
+  <head></head>
+  <body>
+    <h1>compjure</h1>
+    <h2>test simple static html file</h2>
+    <div style="border:1px solid black; width:640px;padding-left:125px">
+    Done! (Hint: You are on it, to see this file go to public/html
+    in the project root)
+    </div>
+    <h2>test passing some url parameters to a url</h2>
+    <div style="border:1px solid black; width:640px;padding-left:125px">
+    <form method="get" action="search">
+      Checkbox 1 <input type="checkbox" name="checkbox_1" value="checkbox_1_val">
+      Checkbox 2 <input type="checkbox" name="checkbox_2" value="checkbox_2_val">
+      Checkbox 3 <input type="checkbox" name="checkbox_3" value="checkbox_3_val">
+      Checkbox 4 <input type="checkbox" name="checkbox_4" value="checkbox_4_val">
+      <br/>
+      Checkbox 1 <input type="checkbox" name="cb[]" value="checkbox_1_val">
+      Checkbox 2 <input type="checkbox" name="cb[]" value="checkbox_2_val">
+      Checkbox 3 <input type="checkbox" name="cb[]" value="checkbox_3_val">
+      Checkbox 4 <input type="checkbox" name="cb[]" value="checkbox_4_val">
+      <br/>
+      <input type="radio" name="radio_1" value="higher" checked> Radio
+      <input type="radio" name="radio_1" value="lower" checked> Radio
+      <input type="radio" name="radio_1" value="not higher" checked> Radio
+      <input type="radio" name="radio_1" value="not lower" checked> Radio
+      <br/>
+      <textarea name="im_a_textarea"></textarea>
+      <br/>
+      <input type="text" name="im_a_textform">
+      <br/>
+      <select name="im_not_a_textarea_Im_actually_a_dropdown">
+        <option>val is option</option>
+        <option val="ha!">val is not option</option>
+      </select>
+      <input type="submit">
+    </form>
+    </div>
+
+    <h2>test going to a url with a variable in the path</h2> 
+    <div style="border:1px solid black; width:640px;padding-left:125px">
+      <script>
+        function dynamicUrl() {
+          var url= "user/"+document.getElementById('usr_name').value;
+          url += "/"+document.getElementById('usr_name2').value;
+          url += "/delete";
+          window.location = url;
+        }
+      </script>
+      user/ <input type="text" id="usr_name" value="gavin"> /
+      <input type="text" id="usr_name2" value="myers"> /delete
+      <button onclick="dynamicUrl()">go!</button>
+    </div>
+
+    <h2>test a form post</h2> 
+    <div style="border:1px solid black; width:640px;padding-left:125px">
+    <form method="post" action="searchpost">
+      Checkbox 1 <input type="checkbox" name="checkbox_1" value="checkbox_1_val">
+      Checkbox 2 <input type="checkbox" name="checkbox_2" value="checkbox_2_val">
+      Checkbox 3 <input type="checkbox" name="checkbox_3" value="checkbox_3_val">
+      Checkbox 4 <input type="checkbox" name="checkbox_4" value="checkbox_4_val">
+      <br/>
+      Checkbox 1 <input type="checkbox" name="cb[]" value="checkbox_1_val">
+      Checkbox 2 <input type="checkbox" name="cb[]" value="checkbox_2_val">
+      Checkbox 3 <input type="checkbox" name="cb[]" value="checkbox_3_val">
+      Checkbox 4 <input type="checkbox" name="cb[]" value="checkbox_4_val">
+      <br/>
+      <input type="radio" name="radio_1" value="higher" checked> Radio
+      <input type="radio" name="radio_1" value="lower" checked> Radio
+      <input type="radio" name="radio_1" value="not higher" checked> Radio
+      <input type="radio" name="radio_1" value="not lower" checked> Radio
+      <br/>
+      <textarea name="im_a_textarea"></textarea>
+      <br/>
+      <input type="text" name="im_a_textform">
+      <br/>
+      <select name="im_not_a_textarea_Im_actually_a_dropdown">
+        <option>val is option</option>
+        <option val="ha!">val is not option</option>
+      </select>
+      <input type="submit">
+    </form>
+     </div>
+
+    <h2>test a form post w/multipart</h2> 
+    <div style="border:1px solid black; width:640px;padding-left:125px">
+     <form action="/file" method="post" enctype="multipart/form-data">
+      <input name="file" type="file" size="20" />
+      <input type="submit" name="submit" value="submit" />
+    </form>
+    </div>
+
+    <h2>test setting a session variable</h2> 
+    <div style="border:1px solid black; width:640px;padding-left:125px">
+    </div>
+
+  </body>
+</html>
