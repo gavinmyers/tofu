@@ -9,4 +9,4 @@
                  [org.clojure/clojure-contrib "1.2.0"]
                  [compojure "1.1.5"]
                  [de.ubercode.clostache/clostache "1.3.1"]]
-  :main tofu.core)
+  :main project-tofu.core)
